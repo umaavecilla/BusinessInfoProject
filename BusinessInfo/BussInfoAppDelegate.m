@@ -9,11 +9,14 @@
 #import "BussInfoAppDelegate.h"
 
 #import "BussInfoViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation BussInfoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [GMSServices provideAPIKey:@"AIzaSyDbJ5899NCu8K4PKGxLWnbqSZJ2mmvlH1U"];//API key
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

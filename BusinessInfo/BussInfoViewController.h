@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GDataXMLNode.h"
+#import "BusinessTableCell.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface BussInfoViewController : UIViewController
+
+@interface BussInfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UIView *mapView;
+
+@property (weak, nonatomic) IBOutlet UITableView *tblBusiness;
+@property(nonatomic,retain) CLLocationManager *locationManager;
+
+
+-(NSMutableArray*)getBusinessInfo:(NSURL *)url;
+
 
 @end
